@@ -1,13 +1,17 @@
 import React from "react";
 import Bars from "./bars.js";
 import Navigation from "./navigation.js";
+
+import InsertionSort from "./sortingAlgorithms/insertionSort.js";
 import BubbleSort from "./sortingAlgorithms/bubbleSort.js";
+import SelectionSort from "./sortingAlgorithms/selectionSort";
+import MergeSort from "./sortingAlgorithms/mergeSort";
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      size: 300,
+      size: 200,
       array: [],
     };
   }
@@ -24,39 +28,18 @@ export default class App extends React.Component {
     }
     this.setState({ array: arr });
   };
-  // insertionSort=()={
 
-  // }
+  insertionSort = () => {
+    InsertionSort(this.state.array);
+  };
   bubbleSort = () => {
-    // BubbleSort([44, 66, 33, 88, 22, 44, 99, 55, 78, 44, 359]);
     BubbleSort(this.state.array);
-    // const bars = document.querySelectorAll(".bar");
-
-    // console.log(bars);
-    // console.log(animation);
-    // // let timer = 10;
-    // for (let i = 0; i < animation.length; i++) {
-    //   let first = bars[animation[i][0]];
-
-    //   let second = bars[animation[i][0] + 1];
-
-    //   setTimeout(() => {
-    //     first.style.backgroundColor = "red";
-    //     second.style.backgroundColor = "red";
-    //   }, i * 10 + 100);
-    //   setTimeout(() => {
-    //     if (animation[i][1]) {
-    //       first.style.height = `${animation[i][1][0]}px`;
-    //       second.style.height = `${animation[i][1][1]}px`;
-
-    //       first.style.backgroundColor = "green";
-    //       second.style.backgroundColor = "green";
-    //     } else {
-    //       first.style.backgroundColor = "green";
-    //       second.style.backgroundColor = "green";
-    //     }
-    //   }, i * 10 + 200);
-    // }
+  };
+  selectionSort = () => {
+    SelectionSort(this.state.array);
+  };
+  mergeSort = () => {
+    MergeSort(this.state.array, 0);
   };
 
   testing = () => {
@@ -64,7 +47,7 @@ export default class App extends React.Component {
     let sort_arr = [...arr].sort((a, b) => {
       return a - b;
     });
-    console.log(this.arr_compare(sort_arr, BubbleSort(arr)));
+    console.log(this.arr_compare(sort_arr, this.mergeSort(arr)));
   };
   arr_compare(arr, sort_arr) {
     for (let i = 0; i < arr.length; i++) {
@@ -82,7 +65,10 @@ export default class App extends React.Component {
         <br />
         <Navigation
           test={this.testing}
-          sort={this.bubbleSort}
+          insertion={this.insertionSort}
+          bubble={this.bubbleSort}
+          selection={this.selectionSort}
+          merge={this.mergeSort}
           resetArray={this.resetArray}
         />
       </div>

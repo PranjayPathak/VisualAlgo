@@ -5,7 +5,10 @@ export default class navigation extends React.Component {
     return (
       <div>
         <button onClick={this.props.resetArray}>RANDOMIZE</button>
-        <button onClick={this.props.sort}>BUBBLE</button>
+        <button onClick={this.props.bubble}>BUBBLE</button>
+        <button onClick={this.props.insertion}>INSERTION</button>
+        <button onClick={this.props.selection}>SELECTION</button>
+        <button onClick={this.props.merge}>MERGE</button>
         <button onClick={this.props.test}>CHECK</button>
       </div>
     );

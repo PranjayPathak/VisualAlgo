@@ -2,18 +2,22 @@
 
 import { animation_color, animation_height } from "./visualizer";
 
-export default InsertionSort = (arr) => {
+const InsertionSort = (arr) => {
+  let value, hole;
   for (let i = 1; i < arr.length; i++) {
-    console.log(hole > 0 && arr[hole] - 1 > value);
     value = arr[i];
     hole = i;
-
     while (hole >= 0 && arr[hole - 1] > value) {
-      console.log("in while");
+      animation_height(hole, arr[hole - 1]);
+      animation_color(hole, "blue");
       arr[hole] = arr[hole - 1];
       hole = hole - 1;
     }
+    animation_height(hole, value);
+    animation_color(hole, "blue");
     arr[hole] = value;
   }
-  console.log(arr);
+  return arr;
 };
+
+export default InsertionSort;
