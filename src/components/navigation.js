@@ -8,8 +8,7 @@ export default class navigation extends React.Component {
         <button onClick={this.props.bubble}>BUBBLE</button>
         <button onClick={this.props.insertion}>INSERTION</button>
         <button onClick={this.props.selection}>SELECTION</button>
-        <button onClick={this.props.merge}>MERGE</button>
-        <button onClick={this.props.test}>CHECK</button>
+        <button onClick={this.props.merge}>MERGE</button>      
       </div>
     );
   }
