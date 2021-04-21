@@ -1,8 +1,10 @@
 //
-import { animation_color, animation_height } from "./visualizer";
+// import { animation_color, animation_height } from "./visualizer";
+
+;
 
 const Bubble = (arr) => {
-  let c, flag;
+  let c, flag,anim_arr=[];
   const len = arr.length;
   for (let j = 0; j < len - 1; j++) {
     flag = 0;
@@ -12,24 +14,25 @@ const Bubble = (arr) => {
 
       if (arr[i] > arr[i + 1]) {
         c = arr[i];
-
-        animation_color(i, "red");
-        animation_height(i, arr[i + 1]);
-        animation_color(i + 1, "red");
-        animation_height(i + 1, arr[i]);
+       anim_arr.push([i, arr[i + 1]]);
+       anim_arr.push([i + 1, arr[i]]);
+        // animation_color(i, "red");
+        // animation_height(i, arr[i + 1]);
+        // animation_color(i + 1, "red");
+        // animation_height(i + 1, arr[i]);
         arr[i] = arr[i + 1];
         arr[i + 1] = c;
         flag = 1;
       }
-      animation_color(i, "blue");
-      animation_color(i + 1, "blue");
+      // animation_color(i, "blue");
+      // animation_color(i + 1, "blue");
     }
 
     if (flag !== 1) {
       break;
     }
   }
-  return arr;
+  return [arr,anim_arr];
 };
 
 export default Bubble;
