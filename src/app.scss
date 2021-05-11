@@ -1,0 +1,95 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // This defines what 1rem is
+    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+}
+
+body {
+    box-sizing: border-box; 
+}
+
+.container{
+    display:block;
+    background-color: darkgray;
+    height: 95vh;
+    width: 100vw;
+    
+    &_navigation{
+        background-color: darkgreen;
+        display:flex;
+        flex-direction: row;   
+        justify-content: space-evenly;
+ 
+    }
+
+
+    &_graph{
+        background-color: darkolivegreen;
+        display:block;
+
+        &_bars{
+            margin-bottom: 0;       
+            display: flex;
+             justify-content: center;
+
+        }
+    }
+}
+
+.bar {
+    display: inline-block;
+    background-color: blue;
+    margin-left: 1px; 
+    margin-bottom: 0;
+    min-width: 2px
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .bar_wrapper {
+//     width: 40%;
+//       margin: 0 auto;
+//       padding: 15px;
+//       background-color: #CDEFEB;
+//   }
+  
+//   .nav_wrapper {
+//     margin: 0 auto;
+//       width: 42%;
+//   }
+  
+//   .nav_button {
+//     width: 120px;
+//     background-color:   #058373;
+//     color: white;
+//     outline: none;
+//     border: none;
+//     border-radius: 5px;
+//     padding: 10px 0px;
+//     margin: 10px 2px;
+//   }
+  
+  
+//   .range_box{
+//       width: 42%;
+//       margin: 0 auto;
+//   }
+
