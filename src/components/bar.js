@@ -1,5 +1,4 @@
 import React from "react";
-import "./bar.css";
 export default class bar extends React.Component {
   render() {
     return (

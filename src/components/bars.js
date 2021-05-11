@@ -6,6 +6,8 @@ export default class bars extends React.Component {
     const graph = this.props.array.map((el, id) => {
       return <Bar cls={id} height={el} key={id} />;
     });
-    return <div>{graph}</div>;
+  
+  
+    return <div className="container_graph_bars">{graph}</div>;
   }
 }
