@@ -53,6 +53,22 @@ body {
   }
 
 
+  .nav_button {
+    color: white;
+      font-size: 16px;
+      font-family: monospace;
+      /* display: inline-block; */
+      /* margin-left: 15px; */
+      /* margin-right: 15px; */
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      margin: 30px;
+  }
+
+.navigation_range{
+    margin: 30px;
+}
 
 
 
@@ -61,35 +77,4 @@ body {
 
 
 
-
-
-
-// .bar_wrapper {
-//     width: 40%;
-//       margin: 0 auto;
-//       padding: 15px;
-//       background-color: #CDEFEB;
-//   }
-  
-//   .nav_wrapper {
-//     margin: 0 auto;
-//       width: 42%;
-//   }
-  
-//   .nav_button {
-//     width: 120px;
-//     background-color:   #058373;
-//     color: white;
-//     outline: none;
-//     border: none;
-//     border-radius: 5px;
-//     padding: 10px 0px;
-//     margin: 10px 2px;
-//   }
-  
-  
-//   .range_box{
-//       width: 42%;
-//       margin: 0 auto;
-//   }
 
